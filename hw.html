@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colored Navbar</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:gainsboro;
+            font-family:Arial, sans-serif;
+        }
+
+        .navbar{
+            width:98%;
+            height:150px;
+            margin:30px auto;
+            background:pink;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 20px;
+        }
+
+        .nav-left{
+            display:flex;
+            gap:25px;
+        }
+
+        .box{
+            width:180px;
+            height:70px;
+            border-radius:20px;
+        }
+
+        .box1{
+            background-color: aqua;
+        }
+
+        .box2{
+            background:aliceblue;
+        }
+
+        .circle{
+            width:90px;
+            height:90px;
+            border-radius:50%;
+            background:lightcyan;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+        </div>
+        <div class="circle"></div>
+    </nav>
+
+</body>
+</html>

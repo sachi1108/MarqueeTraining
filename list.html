@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Layout</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: whitesmoke;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .main-box{
+      width: 92%;
+      height: 90vh;
+      border: 5px solid black;
+      background-color: lightpink;
+      padding: 20px;
+    }
+
+    .navbar{
+      width: 100%;
+      height: 80px;
+      border: 5px solid black;
+      display: flex;
+      background-color:lightgreen;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+
+    .logo{
+      width: 50px;
+      height: 50px;
+      border: 5px solid black;
+      background-color: gainsboro;
+      border-radius: 50%;
+    }
+
+    .menu{
+      display: flex;
+      gap: 60px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .menu a{
+      text-decoration: none;
+      color: black;
+    }
+
+    .profile-btn{
+      width: 80px;
+      height: 35px;
+      border: 5px solid black;
+      background-color: grey;
+      border-radius: 10px;
+    }
+
+    .content{
+      margin-top: 20px;
+      height: calc(100% - 100px);
+      border: 5px solid black;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-around;
+    }
+
+    .box{
+      width: 180px;
+      height: 140px;
+      border: 5px solid black;
+      overflow: hidden;
+    }
+    .box img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .down{
+      margin-top: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-box">
+    <div class="navbar">
+      <div class="logo"></div>
+      <div class="menu">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">service</a>
+      </div>
+      <div class="profile-btn"></div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <img src="ed.jpg" alt="Image">
+      </div>
+      <div class="box down">
+        <img src="hhh.jpg" alt="Image">
+      </div>
+      <div class="box">
+        <img src="tsy.jpeg" alt="Image">
+      </div>
+      <div class="box down">
+        <img src="tay.jpg" alt="Image">
+      </div>
+      <div class="box">
+        <img src="kdkd.jpg" alt="Image">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
