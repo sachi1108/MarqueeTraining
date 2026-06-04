@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>S</title>
+
+    <style>
+        body{
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(3,80px);
+            gap:10px;
+        }
+
+        .box{
+            width:80px;
+            height:80px;
+            background:white;
+        }
+
+        .active{
+            background:pink;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="box active"></div>
+        <div class="box active"></div>
+        <div class="box active"></div>
+
+        <div class="box active"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="box active"></div>
+        <div class="box active"></div>
+        <div class="box active"></div>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box active"></div>
+
+        <div class="box active"></div>
+        <div class="box active"></div>
+        <div class="box active"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:900px;
+    height:550px;
+    border:4px solid black;
+    position:relative;
+}
+
+.v1,.v2,.h1,.h2{
+    position:absolute;
+    background:black;
+    z-index:1;
+}
+
+.v1{
+    left:18%;
+    top:0;
+    width:4px;
+    height:100%;
+}
+
+.v2{
+    left:69%;
+    top:0;
+    width:4px;
+    height:100%;
+}
+
+.h1{
+    top:24%;
+    left:0;
+    width:100%;
+    height:4px;
+}
+
+.h2{
+    top:64%;
+    left:0;
+    width:100%;
+    height:4px;
+}
+
+.box{
+    position:absolute;
+    border:4px solid black;
+    background:white;
+    z-index:2;
+}
+
+.top-left{
+    width:55px;
+    height:55px;
+    top:80px;
+    left:105px;
+}
+
+.top-center{
+    width:150px;
+    height:55px;
+    top:20px;
+    left:300px;
+}
+
+.top-right{
+    width:30px;
+    height:40px;
+    top:0;
+    right:0;
+}
+
+.middle-left{
+    width:45px;
+    height:80px;
+    top:175px;
+    left:0;
+}
+
+.middle-right{
+    width:110px;
+    height:55px;
+    top:190px;
+    left:555px;
+}
+
+.bottom-center{
+    width:120px;
+    height:55px;
+    top:355px;
+    left:320px;
+}
+
+.bottom-left{
+    width:55px;
+    height:55px;
+    bottom:0;
+    left:0;
+}
+
+.bottom-right{
+    width:55px;
+    height:110px;
+    bottom:30px;
+    right:0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="v1"></div>
+    <div class="v2"></div>
+
+    <div class="h1"></div>
+    <div class="h2"></div>
+
+    <div class="box top-left"></div>
+    <div class="box top-center"></div>
+    <div class="box top-right"></div>
+
+    <div class="box middle-left"></div>
+    <div class="box middle-right"></div>
+
+    <div class="box bottom-center"></div>
+    <div class="box bottom-left"></div>
+    <div class="box bottom-right"></div>
+
+</div>
+
+</body>
+</html>
