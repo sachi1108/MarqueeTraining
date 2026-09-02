@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Post Clone</title>
+
+<style>
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:black; 
+    border-radius: 20px;
+}
+
+
+.box1{
+    width:450px;
+    border:2px solid black;
+    background:white; 
+    font-family:Arial, sans-serif;
+    border-radius: 20px;
+}
+
+
+.header-div{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.header{
+    font-weight:bold;
+}
+
+
+.image-div{
+    width:450px;
+    height:500px;
+}
+
+.box{
+    width:100%;
+    height:100%;
+    background-image:url('kitty.jpeg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    border-radius: 20px;
+}
+
+.action-div{
+    padding:10px;
+    border-top:1px solid #ddd;
+}
+
+.actions{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+#heart,
+#comment,
+#share{
+    width:30px;
+    height:30px;
+    
+}
+
+.comment-box{
+    display:none;
+    padding:10px;
+}
+
+.comment-box input{
+    width:95%;
+    padding:8px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box1">
+
+    
+    <div class="header-div">
+        <div class="header">@ Billu</div>
+    </div>
+
+
+    <div class="image-div">
+        <div class="box"></div>
+    </div>
+
+
+    <div class="action-div">
+        <div class="actions">
+            <img id="heart" src="white.webp">
+            Like <span id="counter">0</span>
+
+            <img id="comment" src="c.png">
+            Comment
+
+            <img id="share" src="hh.png">
+            Share
+        </div>
+
+        <div id="commentBox" class="comment-box">
+            <input type="text" placeholder="Write a comment...">
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+let heart = document.getElementById("heart");
+let counter = document.getElementById("counter");
+let liked = false;
+let count = 0;
+
+heart.addEventListener("click", function(){
+
+    if(liked){
+        heart.src = "white.webp";
+        count--;
+        liked = false;
+    }else{
+        heart.src = "red.webp";
+        count++;
+        liked = true;
+    }
+
+    counter.textContent = count;
+});
+
+let comment = document.getElementById("comment");
+let commentBox = document.getElementById("commentBox");
+
+comment.addEventListener("click", function(){
+
+    if(commentBox.style.display == "block"){
+        commentBox.style.display = "none";
+    }else{
+        commentBox.style.display = "block";
+    }
+
+});
+
+</script>
+
+</body>
+</html>

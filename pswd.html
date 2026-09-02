@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validator</title>
+</head>
+
+<style>
+    body {
+        background-color: pink;
+    }
+</style>
+
+<body>
+<h2>Password Validator</h2>
+
+<input type="password" id="pass" placeholder="Enter Password">
+
+<p id="cond-length" style="color: red;">Need 8 characters</p>
+<p id="cond-upper" style="color: red;">Need 1 capital letter</p>
+<p id="cond-number" style="color: red;">Need 1 number</p>
+<p id="cond-special" style="color: red;">Need 1 special character</p>
+
+<script>
+let a = document.getElementById("pass");
+
+let b = document.getElementById("cond-length");
+let c = document.getElementById("cond-upper");
+let d = document.getElementById("cond-number");
+let e = document.getElementById("cond-special");
+
+a.addEventListener("input", function () {
+
+    let f = a.value;
+
+    let g = false;
+    let h = false;
+    let i = false;
+
+    let j = ["!", "@", "#", "$", "%", "*", "&"];
+
+    for (let k = 0; k < f.length; k++) {
+        let l = f[k];
+
+        if (l >= "A" && l <= "Z") {
+            g = true;
+        }
+        else if (l >= "0" && l <= "9") {
+            h = true;
+        }
+        else if (j.includes(l)) {
+            i = true;
+        }
+    }
+
+    if (f.length >= 8) {
+    b.style.color = "green";
+} else {
+    b.style.color = "red";
+}
+
+if (g == true) {
+    c.style.color = "green";
+} else if (g == false) {
+    c.style.color = "red";
+}
+
+if (h == true) {
+    d.style.color = "green";
+} else if (h == false) {
+    d.style.color = "red";
+}
+
+if (i == true) {
+    e.style.color = "green";
+} else if (i == false) {
+    e.style.color = "red";
+}
+
+});
+</script>
+
+</body>
+</html>

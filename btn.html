@@ -1,0 +1,235 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Password</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    .field {
+      max-width: 300px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="field">
+    <label>Password</label>
+    <input type="password" id="password">
+  </div>
+
+  <script>
+    const password = document.getElementById("password");
+    const show = document.getElementById("show");
+
+    show.addEventListener("change", function () {
+      if (password.type === "password") {
+        password.type = "text";
+      } else {
+        password.type = "password";
+      }
+    });
+  </script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validator</title>
+</head>
+<body>
+
+<input type="password" id="pass" placeholder="Enter Password">
+<button onclick="checkPassword()">Done✅💅</button>
+<p id="result"></p>
+
+<script>
+function checkPassword() {
+    let password = document.getElementById("pass").value;
+    let upper = /[A-Z]/;
+    let lower = /[a-z]/;
+    let number = /[0-9]/;
+    let special = /[!@#$%^&*(),.?":{}|<>]/;
+
+    if (
+        password.length >= 8 &&
+        upper.test(password) &&
+        lower.test(password) &&
+        number.test(password) &&
+        special.test(password)
+    ) {
+        document.getElementById("result").innerHTML = "✅ Valid Password"; 
+        document.getElementById("result").style.color = "green";
+          } else {
+        document.getElementById("result").innerHTML =
+            "❌ Password must contain:<br>" +
+            "- At least 8 characters<br>" +
+            "- One uppercase letter<br>" +
+            "- One lowercase letter<br>" +
+            "- One number<br>" +
+            "- One special character";
+        document.getElementById("result").style.color = "red";
+    }
+}
+</script>
+
+</body> -->
+<!-- </html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validator</title>
+</head>
+<body>
+
+<input type="password" id="pass">
+<button onclick="checkPassword()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function checkPassword() {
+
+    let password = document.getElementById("pass").value;
+
+    let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let lower = "abcdefghijklmnopqrstuvwxyz";
+    let number = "0123456789";
+    let special = "!@#$%^&*()_+-={}[]|:;<>,.?/";
+
+    let hasUpper = false;
+    let hasLower = false;
+    let hasNumber = false;
+    let hasSpecial = false;
+
+    for(let i = 0; i < password.length; i++) {
+
+        let ch = password[i];
+
+        if (upper.includes(ch))
+            hasUpper = true;
+
+        if (lower.includes(ch))
+            hasLower = true;
+
+        if (number.includes(ch))
+            hasNumber = true;
+
+        if (special.includes(ch))
+            hasSpecial = true;
+    }
+
+    if(password.length >= 8 && hasUpper && hasLower && hasNumber && hasSpecial)
+        document.getElementById("result").innerHTML = "Valid Password";
+    else
+        document.getElementById("result").innerHTML = "Invalid Password";
+}
+</script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Validator</title>
+</head>
+
+<style>
+    body {
+        background-color: antiquewhite;
+    }
+</style>
+
+<body>
+
+<h2>Password Validator</h2>
+
+<input type="password" id="pass" placeholder="Enter Password">
+
+<p id="cond-length" style="color: red;">Need 8 characters</p>
+<p id="cond-upper" style="color: red;">Need 1 capital letter</p>
+<p id="cond-number" style="color: red;">Need 1 number</p>
+<p id="cond-special" style="color: red;">Need 1 special character</p>
+
+<script>
+let a = document.getElementById("pass");
+
+let b = document.getElementById("cond-length");
+let c = document.getElementById("cond-upper");
+let d = document.getElementById("cond-number");
+let e = document.getElementById("cond-special");
+
+a.addEventListener("input", function () {
+
+    let f = a.value;
+
+    let g = false;
+    let h = false;
+    let i = false;
+
+    let j = ["!", "@", "#", "$", "%", "*", "&"];
+
+    for (let k = 0; k < f.length; k++) {
+        let l = f[k];
+
+        if (l >= "A" && l <= "Z") {
+            g = true;
+        }
+        else if (l >= "0" && l <= "9") {
+            h = true;
+        }
+        else if (j.includes(l)) {
+            i = true;
+        }
+    }
+
+    if (f.length >= 8) {
+    b.style.color = "green";
+} else {
+    b.style.color = "red";
+}
+
+if (g == true) {
+    c.style.color = "green";
+} else if (g == false) {
+    c.style.color = "red";
+}
+
+if (h == true) {
+    d.style.color = "green";
+} else if (h == false) {
+    d.style.color = "red";
+}
+
+if (i == true) {
+    e.style.color = "green";
+} else if (i == false) {
+    e.style.color = "red";
+}
+
+});
+</script>
+
+</body>
+</html>

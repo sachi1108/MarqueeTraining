@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:white;
+}
+
+.dashboard{
+    width:700px;
+    height:500px;
+    padding:8px;
+    border:3px solid black;
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:8px;
+}
+
+.sidebar{
+    background:#003cff;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    border:2px solid black;
+}
+
+.main{
+    display:grid;
+    grid-template-rows:60px 70px 1fr 100px;
+    gap:8px;
+}
+
+.nav{
+    background:#19e6e6;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    border:2px solid black;
+}
+
+.reports{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+}
+
+.report{
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    font-weight:bold;
+    border:2px solid black;
+}
+
+.r1{
+    background:#12cfd1;
+}
+
+.r2{
+    background:#1de99f;
+}
+
+.r3{
+    background:#f6a766;
+}
+
+.middle{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:8px;
+}
+
+.chart{
+    background:linear-gradient(135deg,#6f2cff,#a94bff);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    font-size:22px;
+    border:2px solid black;
+}
+
+.table{
+    background:#ff4fd8;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    border:2px solid black;
+}
+
+.widgets{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+}
+
+.widget{
+    background:#17a8ff;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    border:2px solid black;
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <div class="sidebar">
+        Sidebar
+    </div>
+
+    <div class="main">
+
+        <div class="nav">
+            Top Navigation
+        </div>
+
+        <div class="reports">
+
+            <div class="report r1">
+                Report 1<br>
+                1,250
+            </div>
+
+            <div class="report r2">
+                Revenue<br>
+                20,000
+            </div>
+
+            <div class="report r3">
+                Orders<br>
+                1,250
+            </div>
+
+        </div>
+
+        <div class="middle">
+
+            <div class="chart">
+                Chart
+                <small>(span 2)</small>
+            </div>
+
+            <div class="table">
+                Table
+            </div>
+
+        </div>
+
+        <div class="widgets">
+
+            <div class="widget">
+                Widget 1
+            </div>
+
+            <div class="widget">
+                Widget 2
+            </div>
+
+            <div class="widget">
+                Widget 3
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar System Animation</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle,#091540,#000);
+    overflow:hidden;
+}
+
+.space{
+    position:relative;
+    width:700px;
+    height:700px;
+}
+
+.sun{
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:radial-gradient(circle,#fff700,#ff9800,#ff4500);
+    border-radius:50%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 80px orange;
+    animation:sunGlow 2s infinite alternate;
+}
+
+.orbit{
+    position:absolute;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+.orbit1{
+    width:220px;
+    height:220px;
+    animation:rotate 6s linear infinite;
+}
+
+.orbit2{
+    width:340px;
+    height:340px;
+    animation:rotate 10s linear infinite;
+}
+
+.orbit3{
+    width:470px;
+    height:470px;
+    animation:rotate 15s linear infinite;
+}
+
+.planet{
+    position:absolute;
+    border-radius:50%;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.earth{
+    width:30px;
+    height:30px;
+    background:linear-gradient(#00e5ff,#004dff);
+    left:-15px;
+    box-shadow:0 0 20px cyan;
+}
+
+.mars{
+    width:22px;
+    height:22px;
+    background:#ff5722;
+    left:-11px;
+    box-shadow:0 0 15px red;
+}
+
+.jupiter{
+    width:50px;
+    height:50px;
+    background:linear-gradient(#d2b48c,#8b4513);
+    left:-25px;
+    box-shadow:0 0 25px #ffb74d;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:30%;
+    animation:blink 2s infinite;
+}
+
+.star:nth-child(1){left:50px;top:80px;}
+.star:nth-child(2){right:70px;top:150px;animation-delay:.5s;}
+.star:nth-child(3){left:100px;bottom:120px;animation-delay:1s;}
+.star:nth-child(4){right:120px;bottom:80px;animation-delay:1.5s;}
+.star:nth-child(5){left:300px;top:30px;animation-delay:2s;}
+.star:nth-child(6){right:300px;bottom:30px;animation-delay:1s;}
+
+@keyframes rotate{
+
+from{
+transform:translate(-50%,-50%) rotate(0deg);
+}
+
+to{
+transform:translate(-50%,-50%) rotate(360deg);
+}
+
+}
+
+@keyframes blink{
+
+0%,100%{
+opacity:.2;
+transform:scale(1);
+}
+
+50%{
+opacity:1;
+transform:scale(2);
+}
+
+}
+
+@keyframes sunGlow{
+
+from{
+box-shadow:0 0 60px orange;
+}
+
+to{
+box-shadow:0 0 120px yellow;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="space">
+
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+
+<div class="sun"></div>
+
+<div class="orbit orbit1">
+<div class="planet earth"></div>
+</div>
+
+<div class="orbit orbit2">
+<div class="planet mars"></div>
+</div>
+
+<div class="orbit orbit3">
+<div class="planet jupiter"></div>
+</div>
+
+</div>
+
+</body>
+</html> 

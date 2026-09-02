@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/register"
+      method="POST">
+
+  <label for="name">Full Name:</label>
+  <input type="text"
+         id="name"
+         name="name"
+         placeholder="Enter your name"
+         required />
+
+  <label for="email">Email:</label>
+  <input type="email"
+         id="email"
+         name="email"
+         required />
+
+  <input type="password"
+         name="password"
+         placeholder="Min 6 chars" />
+
+  <input type="number"
+         name="age"
+         min="18" max="60" />
+
+  <button type="submit">
+    Register Now
+  </button>
+  <textarea name="bio"
+          rows="4"
+          placeholder="About you...">
+</textarea>
+ 
+
+</form>
+
+</body>
+</html>

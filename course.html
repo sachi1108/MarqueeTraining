@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+
+        .navbar {
+            height: 90px;
+            background: #363a4b;
+            display: flex;
+            padding: 0 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+        }
+
+        .logo h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 2px;
+        }
+
+        .logo p {
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 45px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .nav-links li a i {
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .login {
+            text-decoration: none;
+            color: #2b6dff;
+            border: 1px solid #2b6dff;
+            padding: 12px 25px;
+            border-radius: 8px;
+        }
+
+        .signup {
+            text-decoration: none;
+            color: #1bb44a;
+            border: 1px solid #1bb44a;
+            padding: 12px 25px;
+            border-radius: 8px;
+        }
+
+
+        .heading {
+            width: 90%;
+            margin: 35px auto;
+            font-size: 45px;
+            color: #2d2d44;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding-bottom: 40px;
+        }
+
+        .card {
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .card-content {
+            padding: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card p {
+            margin: 8px 0;
+            color: #666;
+        }
+
+        .price {
+            color: #27ae60;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .rating {
+            color: #f39c12;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <h2>EAL</h2>
+
+            <div>
+                <p>Deep Eigen</p>
+                <p>AI Labs</p>
+            </div>
+
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Company </a></li>
+        </ul>
+
+        <div class="buttons">
+            <a href="#" class="login">Log In</a>
+            <a href="#" class="signup">Sign Up</a>
+        </div>
+    </nav>
+
+    <h1 class="heading">COURSES</h1>
+
+    <div class="container"></div>
+
+    <script>
+
+        let courses = [
+            {
+                course_name: "Full Stack Web Development",
+                instructor_name: "Amit Sharma",
+                duration: "6 Months",
+                course_price: 12999,
+                rating: 4.8,
+
+            },
+            {
+                course_name: "Python Programming Masterclass",
+                instructor_name: "Neha Verma",
+                duration: "3 Months",
+                course_price: 6999,
+                rating: 4.7,
+
+            },
+            {
+                course_name: "Digital Drawing and Illustration",
+                instructor_name: "Riya Kapoor",
+                duration: "2 Months",
+                course_price: 4999,
+                rating: 4.6,
+
+            },
+            {
+                course_name: "Digital Marketing Complete Course",
+                instructor_name: "Rahul Mehta",
+                duration: "4 Months",
+                course_price: 8999,
+                rating: 4.5,
+
+            },
+            {
+                course_name: "React.js From Beginner to Advanced",
+                instructor_name: "Amit Sharma",
+                duration: "2 Months",
+                course_price: 5999,
+                rating: 4.9,
+
+            },
+            {
+                course_name: "Guitar for Beginners",
+                instructor_name: "Arjun Singh",
+                duration: "3 Months",
+                course_price: 3999,
+                rating: 4.7,
+
+            },
+            {
+                course_name: "Data Science with Python",
+                instructor_name: "Neha Verma",
+                duration: "5 Months",
+                course_price: 14999,
+                rating: 4.8,
+
+            },
+            {
+                course_name: "UI UX Design Fundamentals",
+                instructor_name: "Riya Kapoor",
+                duration: "3 Months",
+                course_price: 7999,
+                rating: 4.6,
+
+            },
+            {
+                course_name: "Entrepreneurship and Startup Fundamentals",
+                instructor_name: "Rahul Mehta",
+                duration: "2 Months",
+                course_price: 5499,
+                rating: 4.4,
+
+            },
+            {
+                course_name: "Node.js Backend Development",
+                instructor_name: "Amit Sharma",
+                duration: "3 Months",
+                course_price: 7499,
+                rating: 4.8,
+            }
+        ];
+
+        let container = document.querySelector(".container");
+
+        courses.forEach(course => {
+
+            container.innerHTML += `
+
+<div class="card">
+<div class="card-content">
+    <h3>${course.course_name}</h3>
+    <p><strong>Instructor:</strong> ${course.instructor_name}</p>
+    <p><strong>Duration:</strong> ${course.duration}</p>
+    <p class="price">₹${course.course_price}</p>
+    <p class="rating">⭐ ${course.rating}</p>
+    <a href="#" class="btn">View Course</a>
+</div>
+
+</div>
+
+`;
+
+        });
+
+        let anchor=document.querySelectorAll("a");
+        anchor.forEach(link => {
+            link.addEventListener("click",(event)=>{
+                event.preventDefault();
+            })
+        });
+
+        
+let select = document.getElementById("price");
+
+select.addEventListener("change", function () {
+
+    let result;
+
+    if (select.value == "all") {
+        result = courses;
+    } else {
+        result = courses.filter(function(course) {
+            return course.course_price < Number(select.value);
+        });
+    }
+
+    console.clear();     
+    console.log(result);
+
+});
+    </script>
+
+</body>
+
+</html>

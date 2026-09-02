@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar a:hover {
+            color: yellow;
+        }
+
+        .hero {
+            height: 300px;
+            background: linear-gradient(to right, skyblue, purple);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            animation: move 5s;
+        }
+
+        @keyframes move {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card::before {
+            content: "*";
+            color: orange;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px;
+        }
+
+        .box {
+            background: lightblue;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+
+        input:focus {
+            border: 3px solid pink;
+            outline: none;
+        }
+
+        .contact {
+            text-align: center;
+            margin: 40px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:600px) {
+            .navbar ul {
+                flex-direction:column;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <h2>My CSS Project</h2>
+
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+
+    </div>
+
+    <div class="hero">
+
+        <h1>Learning CSS</h1>
+
+    </div>
+
+    <div class="skills">
+
+        <div class="box">Flexbox</div>
+        <div class="box">Grid</div>
+        <div class="box">Animation</div>
+        <div class="box">Responsive</div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <h3>Selectors</h3>
+            <p>Used for selecting HTML elements.</p>
+        </div>
+
+        <div class="card">
+            <h3>Box Model</h3>
+            <p>Includes margin, border and padding.</p>
+        </div>
+
+        <div class="card">
+            <h3>Flexbox</h3>
+            <p>Used for one dimensional layouts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Grid</h3>
+            <p>Used for two dimensional layouts.</p>
+        </div>
+
+    </div>
+
+    <div class="contact">
+
+        <h2>Contact Us</h2>
+        <br>
+
+        <input type="text" placeholder="Enter Name">
+
+    </div>
+
+    <footer>
+        meowwww
+    </footer>
+
+</body>
+
+</html>

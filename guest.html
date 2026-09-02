@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do List</title>
+
+    <style>
+        body{
+            background-color:pink;
+        }
+
+        .box{
+            width:260px;
+            background:white;
+            padding:20px;
+            border:1px solid black;
+        }
+
+        input{
+            width:200px;
+            height:30px;
+        }
+
+        button{
+            height:35px;
+            cursor:pointer;
+            margin-left:5px;
+        }
+
+        ul{
+            margin-top:20px;
+        }
+
+        li{
+            margin:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>My To Do List</h2>
+
+    <input type="text" id="task" placeholder="Enter Task">
+    <button onclick="add()" id="btn">Add</button>
+
+    <ul id="list"></ul>
+
+</div>
+
+<script>
+
+var editItem = null;
+function add(){
+    var task = document.getElementById("task").value;
+    if(task==""){
+        alert("Please Enter Task");
+        return;
+    }
+    if(editItem==null){
+        var li = document.createElement("li");
+        li.innerHTML = task +
+
+        " <button onclick='removeTask(this)'>Delete</button>";
+        document.getElementById("list").appendChild(li);
+    }
+    else{
+        editItem.firstChild.nodeValue = task;
+        editItem = null;
+        document.getElementById("btn").innerHTML = "Add";
+    }
+    document.getElementById("task").value = "";
+}
+function removeTask(x){
+    x.parentElement.remove();
+}
+function editTask(x){
+    editItem = x.parentElement;
+    document.getElementById("task").value = editItem.firstChild.nodeValue;
+}
+</script>
+</body>
+</html>

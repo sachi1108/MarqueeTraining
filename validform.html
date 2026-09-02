@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <!-- <link rel='stylesheet' href='main.css'> -->
+</head>
+<body>
+    <form action='' method="POST">
+        <p>Enter Your name:</p>
+        <input type="text" id="name" required>
+        <p>Enter email</p>
+        <input type="text" id="email" required>
+        <p>Password:</p>
+        <input type="password" id="pass" required>
+        <p>Age</p>
+        <input type="number" id="age" required>
+
+        <button type="submit" id="submit">Submit</button>
+        <br>
+        <input type="checkbox" id="tc">Terms and Conditions
+    </form>
+    <script>
+        let button=document.querySelector("#submit")
+        let name=document.querySelector("#name")
+        let email=document.querySelector("#email")
+        let pass=document.querySelector("#pass")
+        let form=document.querySelector('form')
+        let age=document.querySelector('#age')
+        let tc=document.querySelector('#tc')
+
+        button.disabled = true
+
+        age.addEventListener('change',()=>{
+            if(age.value >= 18 && tc.checked){
+                button.disabled = false
+            } else {
+                button.disabled = true
+            }
+        })
+
+        tc.addEventListener('change',()=>{
+            if(age.value >= 18 && tc.checked){
+                button.disabled = false
+            } else {
+                button.disabled = true
+            }
+        })
+
+        button.addEventListener('click',()=>{
+    
+            let obj={
+                name: name.value,
+                email: email.value,
+                pass: pass.value,
+                age: age.value
+            }
+            console.log(obj)
+        })
+    </script>
+
+    
+</body>
+</html>

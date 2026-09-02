@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automatic Color Toggle</title>
+</head>
+<style>
+    .container{
+        background-color: red;
+        height: 100px;
+        width:200px;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        display: flex;
+    }
+</style>
+<body>
+
+<!-- <div id="box" style="width:200px; height:200px; background:red;"></div> -->
+
+<script>
+    let count=0;
+    let btn=document.querySelector("button")
+    let div=document.querySelector("div")
+    btn.addEventListener("click",()=>{
+        count++;
+        div.innerHTML=count;
+    })
+    // let box = document.getElementById("box");
+    // let isRed = true;
+
+    // setInterval(() => {
+    //     if (isRed) {
+    //         box.style.backgroundColor = "blue";
+    //     } else {
+    //         box.style.backgroundColor = "red";
+    //     }
+
+    //     isRed = !isRed;
+    // }, 100);
+</script>
+
+</body>
+<div class="container">0</div>
+</html>
